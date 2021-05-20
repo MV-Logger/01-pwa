@@ -1,0 +1,1 @@
+const store = localforage.createInstance({name: "logs"});
