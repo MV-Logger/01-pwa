@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  width: 100vw;
+  height: 100vh;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+}
+body main img {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 50%;
+}
+body main form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+body main a {
+  text-align: center;
+}
+
+/*# sourceMappingURL=form.css.map */
