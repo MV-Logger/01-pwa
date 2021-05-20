@@ -5,23 +5,29 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Logger</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/form.css">
 
 </head>
 <body>
 
-    <main>
-        <img src="assets/img/logo2.jpg" alt="logo">
+    <main class="container">
+        <h1>Logs without the hassle</h1>
+        <img src="assets/img/logo.jpg" alt="logo">
         <form>
-            <label for="name">Username</label>
-            <input type="text" id="name" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" required>
-            <input type="submit" value="login">
+            <div class="form-group">
+                <label for="name">Username</label>
+                <input type="text" class="form-control" id="name" required placeholder="Username...">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" minlength="5" required placeholder="Password...">
+            </div>
+            <input type="submit" value="Login" class="btn btn-outline-dark fw-bold mt-3">
+            <small id="loginFailed" class="form-text text-muted text-danger"></small>
         </form>
-        <a href="register.html">If you dont have an account yet, sign up here</a>
+        <a href="register.html" class="text-dark">If you dont have an account yet, sign up here</a>
     </main>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
