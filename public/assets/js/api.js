@@ -41,11 +41,11 @@ function loginUser(username, passwd) {
 }
 
 function checkIndexAuth() {
-    callAuth("/auth/login")
+    callAuth("/auth/authenticated" )
         .then(_ => window.location.href = "home.html")
 }
 
 function checkHomeAuth() {
-    callAuth("/auth/login")
+    callAuth("/auth/authenticated" )
         .catch(_ => window.location.href = "index.html")
 }

@@ -1,0 +1,125 @@
+@use "sass:math";
+@import 'variables';
+
+$offset: Min(10vh, 75px);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-sans-serif;
+
+  header {
+    height: $offset;
+    background-color: $onyx;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+
+    h1 {
+      text-align: center;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  main {
+    padding-bottom: 50px;
+    margin-bottom: $offset;
+    max-width: 600px !important;
+
+
+    section {
+      flex-direction: column;
+      display: flex;
+
+
+      article {
+        border: $onyx solid 1px;
+        background-color: #F5FFFA;
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: 0.25rem;
+      }
+
+
+    }
+  }
+
+  form {
+    position: fixed;
+    bottom: $offset;
+    height: 50px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0 10px;
+
+    input[type=text] {
+      width: available;
+    }
+
+    button[type=submit] {
+
+      background-position-x: 12px;
+      //border-radius: 50%;
+      background: transparent url("../img/send.svg") no-repeat center;
+      background-size: 40px;
+      border: none;
+      width: 50px;
+      box-sizing: border-box;
+      color: transparent;
+      // background-color: white;
+    }
+  }
+
+  nav {
+    position: fixed;
+    bottom: 0;
+    height: $offset;
+    width: 100%;
+    background-color: $onyx;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    //justify-content: safe center; not supported and without safe it breaks
+    overflow-x: scroll;
+    box-sizing: border-box;
+
+    div {
+      $size: Min(60px, 8vh);
+      height: $size;
+      box-sizing: border-box;
+      margin: 0 10px;
+      border: white solid 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+
+    }
+
+
+    div.active {
+      color: $onyx;
+      background: white;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    button {
+      background: $onyx;
+      color: white;
+      font-size: 3rem;
+      border: none;
+      margin-right: 10px;
+    }
+  }
+}
+

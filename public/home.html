@@ -3,11 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Logs without the hassle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
+    <header>
+        <h1>Logs without the hassle</h1>
+    </header>
+    <main class="container">
+
+            <section>
+                <article>
+                    Logging something here
+                </article>
+                <article>
+                    Logging something here2
+                </article>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum harum incidunt iure laboriosam
+                    quas repellendus rerum similique. Atque, aut eaque mollitia nobis reiciendis suscipit veritatis?
+                    Atque est iusto similique tempora!
+                </article>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum harum incidunt iure laboriosam
+                    quas repellendus rerum similique. Atque, aut eaque mollitia nobis reiciendis suscipit veritatis?
+                    Atque est iusto similique tempora!
+                </article>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum harum incidunt iure laboriosam
+                    quas repellendus rerum similique. Atque, aut eaque mollitia nobis reiciendis suscipit veritatis?
+                    Atque est iusto similique tempora!
+                </article>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum harum incidunt iure laboriosam
+                    quas repellendus rerum similique. Atque, aut eaque mollitia nobis reiciendis suscipit veritatis?
+                    Atque est iusto similique tempora!
+                </article>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum harum incidunt iure laboriosam
+                    quas repellendus rerum similique. Atque, aut eaque mollitia nobis reiciendis suscipit veritatis?
+                    Atque est iusto similique tempora!
+                </article>
+            </section>
+    </main>
+    <form>
+        <textarea class="form-control" placeholder="Add an entry..." aria-describedby="button-addon2"> </textarea>
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2"></button>
+    </form>
+    <nav>
+
+        <div class="item">Spiders</div>
+        <div class="item">Snakes</div>
+        <div class="active">Keebs</div>
+        <div class="item">Keebs1</div>
+        <div class="item">Keebs2</div>
+        <div class="item">Keebs3</div>
+
+        <button data-bs-toggle="modal" data-bs-target="#addBook">+</button>
+    </nav>
+    <div class="modal fade" id="addBook" tabindex="-1" aria-labelledby="addBook aria" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a book</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Title">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/libs/bootstrap.bundle.min.js"></script>
     <script src="assets/js/libs/localforage.min.js"></script>
     <script src="assets/js/api.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 </html>
