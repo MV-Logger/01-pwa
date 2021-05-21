@@ -1,6 +1,6 @@
 const nodeServer = "http://localhost:5000/api"
 const laravelServer = "http://homestead.test/api"
-const server = nodeServer
+const server = laravelServer
 
 const store = localforage.createInstance({name: "logs"});
 
@@ -51,7 +51,7 @@ function getBooks() {
     return callAuth("/books").then(res => res.json())
 }
 
-function addBooks(name) {
+function addBook(name) {
     return callAuth("/books", "POST", {name: name})
 }
 
@@ -62,4 +62,11 @@ function getEntries(bookId) {
 
 function addEntry(bookId, text, when, where) {
     return callAuth(`/books/${bookId}/entries`, "POST", {when: when, where: where, text: text})
+        .then(r => r.json())
+        .catch(_ =>{
+            console.log("failed")
+            console.log(_)
+        })
+        .then(console.log)
+
 }
