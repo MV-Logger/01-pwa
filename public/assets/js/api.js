@@ -10,7 +10,6 @@ function callAuth(uri, method, body) {
 }
 
 function call(uri, method = "GET", body, token) {
-
     return fetch(server + uri, {
         method: method,
         headers: {
@@ -19,7 +18,7 @@ function call(uri, method = "GET", body, token) {
         },
         body: JSON.stringify(body)
     }).then(resp => {
-        if (resp.ok) return Promise.reject(); // ternary operator doesnt wanna work for some reason
+        if (!resp.ok) return Promise.reject(); // ternary operator doesnt wanna work for some reason
         return resp;
     })
 }
@@ -31,21 +30,19 @@ function registerUser(username, passwd) {
 function loginUser(username, passwd) {
     return call("/auth/login", "POST", {username: username, password: passwd})
         .then(resp => resp.json())
-        .then(async resp => {
-            console.log(resp)
-            await store.setItem("token", resp.access_token)
-        })
+        .then(resp => store.setItem("token", resp.access_token))
         .then(_ => {
             window.location.href = "home.html"
         })
 }
 
 function checkIndexAuth() {
-    callAuth("/auth/authenticated" )
+    callAuth("/auth/authenticated")
         .then(_ => window.location.href = "home.html")
+        .catch(_ => void _) // ignore
 }
 
 function checkHomeAuth() {
-    callAuth("/auth/authenticated" )
+    callAuth("/auth/authenticated")
         .catch(_ => window.location.href = "index.html")
 }
