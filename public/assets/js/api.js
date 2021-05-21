@@ -46,3 +46,20 @@ function checkHomeAuth() {
     callAuth("/auth/authenticated")
         .catch(_ => window.location.href = "index.html")
 }
+
+function getBooks() {
+    return callAuth("/books").then(res => res.json())
+}
+
+function addBooks(name) {
+    return callAuth("/books", "POST", {name: name})
+}
+
+function getEntries(bookId) {
+    return callAuth(`/books/${bookId}/entries`)
+        .then(res => res.json())
+}
+
+function addEntry(bookId, text, when, where) {
+    return callAuth(`/books/${bookId}/entries`, "POST", {when: when, where: where, text: text})
+}
