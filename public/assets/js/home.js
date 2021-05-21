@@ -1,0 +1,2 @@
+
+checkHomeAuth() // redirect if auth
