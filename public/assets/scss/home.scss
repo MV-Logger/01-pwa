@@ -90,6 +90,7 @@ body {
 
   nav {
     position: fixed;
+    padding: 0 10px;
     bottom: 0;
     height: $offset;
     width: 100%;
@@ -100,11 +101,14 @@ body {
     flex-direction: row;
     align-items: center;
     //justify-content: safe center; not supported and without safe it breaks
-    overflow-x: scroll;
+
+    overflow-y: hidden;
+    overflow-x: auto;
     box-sizing: border-box;
+    $size: Min(50px, 7vh);
 
     div {
-      $size: Min(60px, 8vh);
+      white-space: nowrap;
       height: $size;
       box-sizing: border-box;
       margin: 0 10px;
@@ -114,6 +118,7 @@ body {
       justify-content: center;
       padding: 5px;
       cursor: pointer;
+      background-color: #3c3f41;
     }
 
 
@@ -125,11 +130,15 @@ body {
     }
 
     button {
+      height: $size;
       background: $onyx;
       color: white;
       font-size: 3rem;
       border: none;
-      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 15px;
     }
   }
 }

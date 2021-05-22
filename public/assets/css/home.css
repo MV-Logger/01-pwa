@@ -67,6 +67,7 @@ body #addEntry button[type=submit] {
 }
 body nav {
   position: fixed;
+  padding: 0 10px;
   bottom: 0;
   height: min(10vh, 75px);
   width: 100%;
@@ -76,11 +77,13 @@ body nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  overflow-x: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
   box-sizing: border-box;
 }
 body nav div {
-  height: min(60px, 8vh);
+  white-space: nowrap;
+  height: min(50px, 7vh);
   box-sizing: border-box;
   margin: 0 10px;
   border: white solid 1px;
@@ -89,6 +92,7 @@ body nav div {
   justify-content: center;
   padding: 5px;
   cursor: pointer;
+  background-color: #3c3f41;
 }
 body nav div.active {
   color: #0f0f0f;
@@ -97,11 +101,15 @@ body nav div.active {
   font-weight: bold;
 }
 body nav button {
+  height: min(50px, 7vh);
   background: #0f0f0f;
   color: white;
   font-size: 3rem;
   border: none;
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 15px;
 }
 
 /*# sourceMappingURL=home.css.map */
