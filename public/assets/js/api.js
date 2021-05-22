@@ -1,6 +1,6 @@
-const nodeServer = "http://localhost:5000/api"
-const laravelServer = "http://homestead.test/api"
-const server = laravelServer
+const nodeServer = "https://nodejs-03.herokuapp.com/api"
+const laravelServer = "https://laravel-04.herokuapp.com/api"
+const server = nodeServer
 
 const store = localforage.createInstance({name: "logs"});
 
