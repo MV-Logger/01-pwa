@@ -20,6 +20,12 @@ body header h1 {
   margin: 0;
   font-size: 1.5rem;
 }
+body header img {
+  color: white;
+  margin-left: auto;
+  padding-right: 10px;
+  cursor: pointer;
+}
 body main {
   padding-bottom: 50px;
   margin-bottom: min(10vh, 75px);

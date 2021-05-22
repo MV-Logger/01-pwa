@@ -9,6 +9,7 @@ function init() {
     loadBooks();
     document.querySelector("#addEntry").addEventListener("submit", clickEntry)
     document.querySelector("#addBook").addEventListener("submit", clickBook)
+    document.querySelector("#logout").addEventListener("click", logout)
     myModal = new bootstrap.Modal(document.getElementById('addBook'))
 }
 
@@ -79,4 +80,9 @@ function clickBook(e) {
         loadBooks();
     })
     name.value = ""
+}
+
+function logout() {
+    store.removeItem("token")
+        .then(checkHomeAuth)
 }
